@@ -30,7 +30,7 @@ namespace Entidades
         /// <param name="num1">Primer numero de la operacion del tipo Numero</param>
         /// <param name="num2">Segundo numero de la operacion del tipo Numero</param>
         /// <param name="operador">String con la operacion a realizar, previamente pasado a Char</param>
-        /// <returns>Retorna el resultado de la operacion como un double</returns>
+        /// <returns>Retorna el resultado de la operacion</returns>
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             char operador2 = ' ';
