@@ -178,7 +178,7 @@ namespace Entidades
 
             for (int i = 0; i < numero.Length; i++)
             {
-                if (numero[i] == ',' || numero[i] == '-' || numero[i] == '.')
+                if (numero[i] == ',' || numero[i] == '-' || numero[i] == '.' || numero[i] == ' ')
                 {
                     return "Valor inválido";
                 }
