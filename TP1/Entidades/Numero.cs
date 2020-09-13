@@ -171,6 +171,11 @@ namespace Entidades
         /// <returns>Retorna el resultado de la operacion o un mensaje de error</returns>
         public static string DecimalBinario(string numero)
         {
+            if (numero == "0")
+            {
+                return numero;
+            }
+
             for (int i = 0; i < numero.Length; i++)
             {
                 if (numero[i] == ',' || numero[i] == '-' || numero[i] == '.')
@@ -197,11 +202,6 @@ namespace Entidades
                 {
                     return false;
                 }
-            }
-
-            if (string.IsNullOrEmpty(binario))
-            {
-                retorno = false;
             }
 
             return retorno;
