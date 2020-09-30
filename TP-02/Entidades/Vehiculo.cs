@@ -26,11 +26,11 @@ namespace Entidades
         private EMarca marca;
 
         /// <summary>
-        /// Inicializa los valores de los atributos de Vehiculo.
+        /// Inicializa los atributos de Vehiculo.
         /// </summary>
-        /// <param name="chasis">Chasis del Vehiculo</param>
-        /// <param name="marca">Marca del Vehiculo</param>
-        /// <param name="color">Color del Vehiculo</param>
+        /// <param name="chasis">Chasis con la que se inicializara el atributo</param>
+        /// <param name="marca">Marca con la que se inicializara el atributo</param>
+        /// <param name="color">Color con el que se inicializara el atributo</param>
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
@@ -39,12 +39,12 @@ namespace Entidades
         }
 
         /// <summary>
-        /// ReadOnly: Retornará el tamaño
+        /// ReadOnly: Retornará el tamaño del Vehiculo
         /// </summary>
         protected abstract ETamanio Tamanio { get; }
 
         /// <summary>
-        /// Publica todos los datos del Vehiculo.
+        /// Publica todos los datos del Vehiculo utilizando la funcion explicita que devuelve un string.
         /// </summary>
         /// <returns>Retorna los datos del Vehiculo</returns>
         public virtual string Mostrar()
@@ -53,9 +53,9 @@ namespace Entidades
         }
 
         /// <summary>
-        /// 
+        /// Pasaje explicito de tipo Vehiculo a string. 
         /// </summary>
-        /// <param name="p">Variable del tipo Vehiculo</param>
+        /// <param name="p">Variable del tipo Vehiculo a mostrar</param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
@@ -73,7 +73,7 @@ namespace Entidades
         /// </summary>
         /// <param name="v1">Vehiculo Uno</param>
         /// <param name="v2">Vehiculo Dos</param>
-        /// <returns>Retorna True si los autos son iguales o false si son distintos</returns>
+        /// <returns>Retorna un booleano que indica si los vehiculos son iguales o distintos</returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
             return (v1.chasis == v2.chasis);
@@ -83,7 +83,7 @@ namespace Entidades
         /// </summary>
         /// <param name="v1">Vehiculo Uno</param>
         /// <param name="v2">Vehiculo Dos</param>
-        /// <returns>Retorna true</returns>
+        /// <returns>Retorna un booleano que indica si los vehiculos son iguales o distintos</returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
             return !(v1 == v2);

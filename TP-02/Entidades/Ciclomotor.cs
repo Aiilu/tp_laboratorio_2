@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase derivada de Vehiculo
+    /// </summary>
     public class Ciclomotor : Vehiculo
     {
+        /// <summary>
+        /// Inicializa los atributos de Ciclomotor llamando al constructor de la clase base.
+        /// </summary>
+        /// <param name="marca">Marca con la que se inicializara el atributo</param>
+        /// <param name="chasis">Chasis con la que se inicializara el atributo</param>
+        /// <param name="color">Color con el que se inicializara el atributo</param>
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
         }
 
         /// <summary>
-        /// Las motos son chicas
+        /// Los Ciclomotores son chicos
+        /// Sobrescribe el metodo heredado, el cual retornara el tamaño del Vehiculo
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -23,7 +33,11 @@ namespace Entidades
             }
         }
 
-        public override string Mostrar() //Habia que sacarle el sealed?? override sealed string
+        /// <summary>
+        /// Sobrescribe el metodo heredado
+        /// </summary>
+        /// <returns>Retorna un string con los datos del Vehiculo en cuestion</returns>
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
