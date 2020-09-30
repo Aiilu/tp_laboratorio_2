@@ -30,14 +30,14 @@ namespace TP_02_2018
             Suv a4 = new Suv(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Green);
 
             // Agrego 8 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
-            taller += c1;
-            taller += c2;
-            taller += m1; //no deberia agregarse por repetido
+            taller += c1; 
+            taller += c2; 
+            taller += m1; 
             taller += m1;
-            taller += m2;
-            taller += a1;
-            taller += a2;
-            taller += a3; //no deberia agregarse por que tiene el mismo chasis
+            taller += m2; 
+            taller += a1; 
+            taller += a2; 
+            taller += a3; 
             taller += a4;
 
             Console.WriteLine(taller.ToString());
@@ -47,7 +47,6 @@ namespace TP_02_2018
 
             // Quito 2 items y muestro
             taller -= c1;
-            //taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
             taller -= new Ciclomotor(Vehiculo.EMarca.HarleyDavidson, "LEM666", ConsoleColor.Red);
 
             Console.WriteLine(taller.ToString());
