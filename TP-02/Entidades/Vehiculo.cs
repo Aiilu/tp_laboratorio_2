@@ -11,7 +11,6 @@ namespace Entidades
     /// </summary>
     public abstract class Vehiculo
     {
- 
         public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
@@ -50,7 +49,7 @@ namespace Entidades
         /// <returns>Retorna los datos del Vehiculo</returns>
         public virtual string Mostrar()
         {
-            return this.ToString(); //El ToString va?
+            return (string)this;
         }
 
         /// <summary>

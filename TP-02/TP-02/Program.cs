@@ -16,7 +16,7 @@ namespace TP_02_2018
             Console.SetWindowSize(Console.LargestWindowWidth / 2, Console.LargestWindowHeight - 2);
 
             // Nombre del alumno
-            Console.Title = "";
+            Console.Title = "Ailen Melina Torrez del curso 2ºC";
 
             Taller taller = new Taller(6);
 
@@ -32,12 +32,12 @@ namespace TP_02_2018
             // Agrego 8 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
             taller += c1;
             taller += c2;
-            taller += m1;
+            taller += m1; //no deberia agregarse por repetido
             taller += m1;
             taller += m2;
             taller += a1;
             taller += a2;
-            taller += a3;
+            taller += a3; //no deberia agregarse por que tiene el mismo chasis
             taller += a4;
 
             Console.WriteLine(taller.ToString());
@@ -47,7 +47,8 @@ namespace TP_02_2018
 
             // Quito 2 items y muestro
             taller -= c1;
-            taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
+            //taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
+            taller -= new Ciclomotor(Vehiculo.EMarca.HarleyDavidson, "LEM666", ConsoleColor.Red);
 
             Console.WriteLine(taller.ToString());
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
@@ -58,19 +59,19 @@ namespace TP_02_2018
             taller += c2;
 
             // Muestro solo Moto
-            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Automovil
-            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Sedan));
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Camioneta
-            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.SUV));
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.SUV));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }
