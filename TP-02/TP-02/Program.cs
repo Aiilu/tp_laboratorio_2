@@ -16,7 +16,7 @@ namespace TP_02_2018
             Console.SetWindowSize(Console.LargestWindowWidth / 2, Console.LargestWindowHeight - 2);
 
             // Nombre del alumno
-            Console.Title = "Ailen Melina Torrez del curso 2ºC";
+            Console.Title = "";
 
             Taller taller = new Taller(6);
 
@@ -30,14 +30,14 @@ namespace TP_02_2018
             Suv a4 = new Suv(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Green);
 
             // Agrego 8 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
-            taller += c1; 
-            taller += c2; 
-            taller += m1; 
+            taller += c1;
+            taller += c2;
             taller += m1;
-            taller += m2; 
-            taller += a1; 
-            taller += a2; 
-            taller += a3; 
+            taller += m1;
+            taller += m2;
+            taller += a1;
+            taller += a2;
+            taller += a3;
             taller += a4;
 
             Console.WriteLine(taller.ToString());
@@ -58,19 +58,19 @@ namespace TP_02_2018
             taller += c2;
 
             // Muestro solo Ciclomotor
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Ciclomotor));
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Sedan
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Sedan));
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo SUV
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.SUV));
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.SUV));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }

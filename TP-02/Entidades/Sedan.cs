@@ -59,7 +59,7 @@ namespace Entidades
         /// Sobrescribe el metodo heredado
         /// </summary>
         /// <returns>Retorna un string con los datos del Vehiculo en cuestion</returns>
-        public override string Mostrar()
+        public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -67,6 +67,7 @@ namespace Entidades
             sb.AppendLine(base.Mostrar());
             sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine($"TIPO : {this.tipo}");
+            //sb.AppendLine(" TIPO: " + this.tipo);
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 

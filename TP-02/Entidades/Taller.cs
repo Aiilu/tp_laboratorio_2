@@ -44,9 +44,9 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns>Retorna un string habiendo llamado previamente al metodo Listar</returns>
-        public string ToString()
+        public override string ToString()
         {
-            return this.Listar(this, ETipo.Todos);
+            return Listar(this, ETipo.Todos);
         }
         #endregion
 
@@ -59,7 +59,7 @@ namespace Entidades
         /// <param name="t">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns>Retorna los datos del elemento y del tipo en cuestion que se pide</returns>
-        public string Listar(Taller t, ETipo tipo)
+        public static string Listar(Taller t, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -88,7 +88,7 @@ namespace Entidades
                             sb.AppendLine(v.Mostrar());
                         }                      
                         break;
-                    case ETipo.Todos:
+                    default:
                         sb.AppendLine(v.Mostrar());
                         break;
                 }
