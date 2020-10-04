@@ -53,7 +53,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Pasaje explicito de tipo Vehiculo a string. 
+        /// Conversion explicita de Vehiculo a string. 
         /// </summary>
         /// <param name="p">Variable del tipo Vehiculo a mostrar</param>
         public static explicit operator string(Vehiculo p)

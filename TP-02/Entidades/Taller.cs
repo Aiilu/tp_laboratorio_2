@@ -88,7 +88,7 @@ namespace Entidades
                             sb.AppendLine(v.Mostrar());
                         }                      
                         break;
-                    default:
+                    case ETipo.Todos:
                         sb.AppendLine(v.Mostrar());
                         break;
                 }
@@ -122,6 +122,7 @@ namespace Entidades
 
             return t;
         }
+
         /// <summary>
         /// Quitará un elemento de la lista
         /// </summary>
