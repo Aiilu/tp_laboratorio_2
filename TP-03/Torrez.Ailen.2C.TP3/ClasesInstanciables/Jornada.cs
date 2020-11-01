@@ -16,11 +16,11 @@ namespace ClasesInstanciables
         {
             get
             {
-
+                return this.alumnos;
             }
             set
             {
-
+               
             }
         }
 
@@ -28,11 +28,11 @@ namespace ClasesInstanciables
         {
             get
             {
-
+                return this.clase;
             }
             set
             {
-
+                this.clase = value;
             }
         }
 
@@ -40,22 +40,23 @@ namespace ClasesInstanciables
         {
             get
             {
-
+                return this.instructor;
             }
             set
             {
-
+                this.instructor = value;
             }
         }
 
         private Jornada()
         {
-
+            this.alumnos = new List<Alumno>();
         }
 
         public Jornada(Universidad.EClases clase, Profesor instructor)
         {
-
+            this.Clase = clase;
+            this.Instructor = instructor;
         }
 
         public bool Guardar(Jornada jornada)
@@ -70,7 +71,9 @@ namespace ClasesInstanciables
 
         public static bool operator ==(Jornada j, Alumno a)
         {
-            return false;
+            foreach(Alumno alumno in j.alumnos)
+            {
+            }
         }
 
         public static bool operator !=(Jornada j, Alumno a)
