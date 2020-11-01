@@ -15,15 +15,17 @@ namespace ClasesAbstractas
         private ENacionalidad nacionalidad;
         private string nombre;
 
+        #region Propiedades
+
         public string Apellido
         {
             get
             {
-                return "a";
+                return this.apellido;
             }
             set
             {
-
+                this.apellido = this.ValidarNombreApellido(value);
             }
         }
 
@@ -31,11 +33,11 @@ namespace ClasesAbstractas
         {
             get
             {
-                return 1;
+                return this.dni;
             }
             set
             {
-
+                this.dni = this.ValidarDni(this.Nacionalidad, value);
             }
         }
 
@@ -43,11 +45,11 @@ namespace ClasesAbstractas
         {
             get
             {
-                return ENacionalidad.Argentino;
+                return this.nacionalidad;
             }
             set
             {
-
+                this.nacionalidad = value;
             }
         }
 
@@ -55,11 +57,11 @@ namespace ClasesAbstractas
         {
             get
             {
-                return "a";
+                return this.nombre;
             }
             set
             {
-
+                this.nombre = this.ValidarNombreApellido(value);
             }
         }
 
@@ -67,9 +69,13 @@ namespace ClasesAbstractas
         {
             set
             {
-
+                this.dni = this.ValidarDni(this.Nacionalidad, value);
             }
         }
+
+        #endregion
+
+        #region Constructores
 
         public Persona()
         {
@@ -78,37 +84,98 @@ namespace ClasesAbstractas
 
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
-
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.nacionalidad = nacionalidad;
         }
 
-        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) :this(nombre, apellido, nacionalidad)
         {
-
+            this.Dni = dni;
         }
 
-        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) :this(nombre, apellido, nacionalidad)
         {
-
+            this.StringToDNI = dni;
         }
+
+        #endregion
+
+        #region Sobrecargas
 
         public override string ToString()
         {
-            return base.ToString();
+            StringBuilder datosPersona = new StringBuilder();
+
+            datosPersona.AppendLine($"NOMBRE COMPLETO: {this.Apellido}, {this.Nombre}");
+            datosPersona.AppendLine($"NACIONALIDAD: {this.Nacionalidad}");
+            datosPersona.AppendLine($"DNI: {this.Dni}");
+
+            return datosPersona.ToString();
         }
+
+        #endregion
+
+        #region Validaciones
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            return 0;
+            if(nacionalidad is ENacionalidad.Argentino)
+            {
+                if(dato >= 1 && dato <= 89999999)
+                {
+                    return dato;
+                }
+            }
+            else
+            {
+                if (dato >= 90000000 && dato <= 99999999)
+                {
+                    return dato;
+                }
+            }
+
+            //throw new NacionalidadInvalidaException();
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-            return 0;
+            int dni;
+
+            if(nacionalidad is ENacionalidad.Argentino)
+            {
+                if(dato.Length >= 1 && dato.Length <= 8)
+                {
+                    if(int.TryParse(dato, out dni))
+                    {
+                        return this.ValidarDni(nacionalidad, dni);
+                    }
+                }
+            }
+            else
+            {
+                if (dato.Length == 8)
+                {
+                    if (int.TryParse(dato, out dni))
+                    {
+                        return this.ValidarDni(nacionalidad, dni);
+                    }
+                }
+            }
+
+            //throw new DniInvalidoException();
         }
 
         private string ValidarNombreApellido(string dato)
         {
-            return "a";
+            if (dato.All(char.IsLetter))
+            {
+                return dato;
+            }
+
+            return null;
         }
+
+        #endregion
     }
 }

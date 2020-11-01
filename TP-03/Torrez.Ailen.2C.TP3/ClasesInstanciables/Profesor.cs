@@ -12,21 +12,22 @@ namespace ClasesInstanciables
         private Queue<Universidad.EClases> clasesDelDia;
         private Random random;
 
-        private Profesor()
+        public Profesor()
         {
 
         }
 
-        /*
-         * public Profesor()
-         */
+        static Profesor()
+        {
+
+        }
 
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
         {
 
         }
 
-        private void _randomClase()
+        private void _randomClases()
         {
 
         }
