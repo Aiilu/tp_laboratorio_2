@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace ClasesAbstractas
 {
-    public abstract class Universitario :Persona
+    public abstract class Universitario : Persona
     {
         private int legajo;
 
         #region Constructores
 
-        public Universitario() :base()
+        public Universitario() : base()
         {
 
         }
 
-        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) :base(nombre, apellido, dni, nacionalidad)
+        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
         {
             this.legajo = legajo;
         }
@@ -49,7 +49,7 @@ namespace ClasesAbstractas
 
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
-            return  pg1.Equals(pg2) && (pg1.legajo == pg2.legajo || pg1.Dni == pg2.Dni);
+            return pg1.Equals(pg2) && (pg1.legajo == pg2.legajo || pg1.Dni == pg2.Dni);
         }
 
         public static bool operator !=(Universitario pg1, Universitario pg2)

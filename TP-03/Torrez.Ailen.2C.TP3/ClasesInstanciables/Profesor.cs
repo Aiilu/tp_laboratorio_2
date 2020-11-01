@@ -1,24 +1,23 @@
-﻿using ClasesAbstractas;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ClasesAbstractas;
 
 namespace ClasesInstanciables
 {
-    public sealed class Profesor :Universitario
+    public sealed class Profesor : Universitario
     {
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
 
         #region Constructores
 
-        public Profesor() :base()
+        public Profesor() : base()
         {
-            
+
         }
 
         static Profesor()
@@ -26,14 +25,14 @@ namespace ClasesInstanciables
             random = new Random();
         }
 
-        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) :base(id, nombre, apellido, dni, nacionalidad)
+        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.clasesDelDia = new Queue<Universidad.EClases>();
             this._randomClases();
         }
 
         private void _randomClases()
-        { 
+        {
             this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
             Thread.Sleep(100);
             this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
@@ -46,7 +45,7 @@ namespace ClasesInstanciables
         {
             StringBuilder datosProfesor = new StringBuilder();
 
-            datosProfesor.AppendLine(base.ToString());
+            datosProfesor.AppendLine(base.MostrarDatos());
 
             datosProfesor.AppendLine(this.ParticiparEnClase());
 
@@ -55,9 +54,9 @@ namespace ClasesInstanciables
 
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            foreach(Universidad.EClases c in i.clasesDelDia)
+            foreach (Universidad.EClases c in i.clasesDelDia)
             {
-                if(c == clase)
+                if (c == clase)
                 {
                     return true;
                 }

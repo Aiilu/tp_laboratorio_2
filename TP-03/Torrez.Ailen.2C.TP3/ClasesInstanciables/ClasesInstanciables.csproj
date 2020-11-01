@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{247BBC9D-475D-47EB-9067-84EABC81A741}</ProjectGuid>
+    <ProjectGuid>{2175251D-5845-4949-8CB5-8363EB4244B0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClasesInstanciables</RootNamespace>
@@ -48,9 +48,17 @@
     <Compile Include="Universidad.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{3e68a8a0-e4e7-45ff-a725-f988fdbcfcaf}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClasesAbstractas\ClasesAbstractas.csproj">
-      <Project>{30b43591-a144-4a60-b07c-f2967d7ad114}</Project>
+      <Project>{7b95954a-2977-4038-8934-93c7d4b9ba46}</Project>
       <Name>ClasesAbstractas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{855a0b5e-34ef-46e3-ab60-50cf3e197c5b}</Project>
+      <Name>Excepciones</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

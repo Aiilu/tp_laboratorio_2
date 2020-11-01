@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace ClasesAbstractas
 {
@@ -84,17 +85,17 @@ namespace ClasesAbstractas
 
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.nacionalidad = nacionalidad;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Nacionalidad = nacionalidad;
         }
 
-        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) :this(nombre, apellido, nacionalidad)
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.Dni = dni;
         }
 
-        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) :this(nombre, apellido, nacionalidad)
+        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.StringToDNI = dni;
         }
@@ -109,7 +110,6 @@ namespace ClasesAbstractas
 
             datosPersona.AppendLine($"NOMBRE COMPLETO: {this.Apellido}, {this.Nombre}");
             datosPersona.AppendLine($"NACIONALIDAD: {this.Nacionalidad}");
-            datosPersona.AppendLine($"DNI: {this.Dni}");
 
             return datosPersona.ToString();
         }
@@ -120,9 +120,9 @@ namespace ClasesAbstractas
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            if(nacionalidad is ENacionalidad.Argentino)
+            if (nacionalidad is ENacionalidad.Argentino)
             {
-                if(dato >= 1 && dato <= 89999999)
+                if (dato >= 1 && dato <= 89999999)
                 {
                     return dato;
                 }
@@ -135,18 +135,18 @@ namespace ClasesAbstractas
                 }
             }
 
-            //throw new NacionalidadInvalidaException();
+            throw new NacionalidadInvalidaException();
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int dni;
 
-            if(nacionalidad is ENacionalidad.Argentino)
+            if (nacionalidad is ENacionalidad.Argentino)
             {
-                if(dato.Length >= 1 && dato.Length <= 8)
+                if (dato.Length >= 1 && dato.Length <= 8)
                 {
-                    if(int.TryParse(dato, out dni))
+                    if (int.TryParse(dato, out dni))
                     {
                         return this.ValidarDni(nacionalidad, dni);
                     }
@@ -163,7 +163,7 @@ namespace ClasesAbstractas
                 }
             }
 
-            //throw new DniInvalidoException();
+            throw new DniInvalidoException();
         }
 
         private string ValidarNombreApellido(string dato)

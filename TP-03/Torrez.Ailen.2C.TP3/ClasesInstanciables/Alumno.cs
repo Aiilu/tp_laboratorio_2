@@ -16,17 +16,17 @@ namespace ClasesInstanciables
 
         #region Constructores
 
-        public Alumno() :base()
+        public Alumno() : base()
         {
 
         }
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) :this(id, nombre, apellido, dni, nacionalidad, claseQueToma, default)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) : this(id, nombre, apellido, dni, nacionalidad, claseQueToma, default)
         {
-            
+
         }
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) :base(id, nombre, apellido, dni, nacionalidad)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.claseQueToma = claseQueToma;
             this.estadoCuenta = estadoCuenta;
@@ -40,9 +40,9 @@ namespace ClasesInstanciables
         {
             StringBuilder datosAlumno = new StringBuilder();
 
-            datosAlumno.AppendLine(base.ToString());
+            datosAlumno.AppendLine(base.MostrarDatos());
 
-            if(this.estadoCuenta == EEstadoCuenta.AlDia)
+            if (this.estadoCuenta == EEstadoCuenta.AlDia)
             {
                 datosAlumno.AppendLine($"ESTADO DE CUENTA: Cuota al día");
             }
@@ -50,7 +50,7 @@ namespace ClasesInstanciables
             {
                 datosAlumno.AppendLine($"ESTADO DE CUENTA: {this.estadoCuenta}");
             }
-            
+
             datosAlumno.AppendLine(this.ParticiparEnClase());
 
             return datosAlumno.ToString();

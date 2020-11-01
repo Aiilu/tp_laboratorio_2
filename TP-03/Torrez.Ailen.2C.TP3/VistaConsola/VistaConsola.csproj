@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A41B328-28A5-48B3-9520-72F3803E2316}</ProjectGuid>
+    <ProjectGuid>{51CD08E2-D0D4-499B-8540-9C8D1DB36B55}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>VistaConsola</RootNamespace>
     <AssemblyName>VistaConsola</AssemblyName>
@@ -48,6 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesAbstractas\ClasesAbstractas.csproj">
+      <Project>{7b95954a-2977-4038-8934-93c7d4b9ba46}</Project>
+      <Name>ClasesAbstractas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClasesInstanciables\ClasesInstanciables.csproj">
+      <Project>{2175251d-5845-4949-8cb5-8363eb4244b0}</Project>
+      <Name>ClasesInstanciables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{855a0b5e-34ef-46e3-ab60-50cf3e197c5b}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
