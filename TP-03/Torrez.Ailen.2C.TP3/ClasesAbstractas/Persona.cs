@@ -18,6 +18,9 @@ namespace ClasesAbstractas
 
         #region Propiedades
 
+        /// <summary>
+        /// Propiedad que retorna o setea el apellido.
+        /// </summary>
         public string Apellido
         {
             get
@@ -30,6 +33,9 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad que retorna o setea el DNI.
+        /// </summary>
         public int Dni
         {
             get
@@ -42,6 +48,9 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad que retorna o setea la nacionalidad.
+        /// </summary>
         public ENacionalidad Nacionalidad
         {
             get
@@ -54,6 +63,9 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad que retorna o setea el nombre.
+        /// </summary>
         public string Nombre
         {
             get
@@ -66,6 +78,9 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad que setea el DNI en formato string.
+        /// </summary>
         public string StringToDNI
         {
             set
@@ -78,11 +93,20 @@ namespace ClasesAbstractas
 
         #region Constructores
 
+        /// <summary>
+        /// Constructor sin parametros.
+        /// </summary>
         public Persona()
         {
 
         }
 
+        /// <summary>
+        /// Inicializa los atributos de Persona con los datos pasados por parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre con el que se inicializara el atributo</param>
+        /// <param name="apellido">Apellido con el que se inicializara el atributo</param>
+        /// <param name="nacionalidad">Nacionalidad con la que se inicializara el atributo</param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Nombre = nombre;
@@ -90,11 +114,25 @@ namespace ClasesAbstractas
             this.Nacionalidad = nacionalidad;
         }
 
+        /// <summary>
+        /// Inicializa los atributos de Persona con los datos pasados por parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre con el que se inicializara el atributo</param>
+        /// <param name="apellido">Apellido con el que se inicializara el atributo</param>
+        /// <param name="dni">DNI con el que se inicializara el atributo</param>
+        /// <param name="nacionalidad">Nacionalidad con la que se inicializara el atributo</param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.Dni = dni;
         }
 
+        /// <summary>
+        /// Inicializa los atributos de Persona con los datos pasados por parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre con el que se inicializara el atributo</param>
+        /// <param name="apellido">Apellido con el que se inicializara el atributo</param>
+        /// <param name="dni">DNI con el que se inicializara el atributo</param>
+        /// <param name="nacionalidad">Nacionalidad con la que se inicializara el atributo</param>
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.StringToDNI = dni;
@@ -102,8 +140,12 @@ namespace ClasesAbstractas
 
         #endregion
 
-        #region Sobrecargas
+        #region Metodos
 
+        /// <summary>
+        /// Sobreescritura del metodo virtual ToString para retonar datos de la persona.
+        /// </summary>
+        /// <returns>Retorna un string con los datos de la Persona</returns>
         public override string ToString()
         {
             StringBuilder datosPersona = new StringBuilder();
@@ -118,6 +160,12 @@ namespace ClasesAbstractas
 
         #region Validaciones
 
+        /// <summary>
+        /// Valida que el dato se encuentre entre los valores requeridos.
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la Persona</param>
+        /// <param name="dato">Dato a validar (DNI)</param>
+        /// <returns>Si cumple las condiciones retorna el dni pasado por parametro, caso contrario se lanza una excepcion</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             if (nacionalidad is ENacionalidad.Argentino)
@@ -138,6 +186,12 @@ namespace ClasesAbstractas
             throw new NacionalidadInvalidaException();
         }
 
+        /// <summary>
+        /// Valida que el dato sea valido (que no presente errores de formato).
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        /// <param name="dato">Dato a validar (DNI)</param>
+        /// <returns>Si cumple las condiciones retorna el dni pasado por parametro, caso contrario se lanza una excepcion</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int dni;
@@ -166,6 +220,11 @@ namespace ClasesAbstractas
             throw new DniInvalidoException();
         }
 
+        /// <summary>
+        /// Valida que la cadena pasada contenga caracteres válidos
+        /// </summary>
+        /// <param name="dato">Dato a validar</param>
+        /// <returns>En caso de ser valido retorna el dato, caso contrario retorna null</returns>
         private string ValidarNombreApellido(string dato)
         {
             if (dato.All(char.IsLetter))

@@ -8,13 +8,18 @@ namespace Excepciones
 {
     public class AlumnoRepetidoException :Exception
     {
-        //Todas las excepciones deberán tener mensajes propios: que tengan al menos un constructor que
-        //reciba mensaje y que tengan un constructor sin parámetros que asigne un mensaje por defecto.
+        /// <summary>
+        /// Constructor vacio que asigna un mensaje por defecto.
+        /// </summary>
         public AlumnoRepetidoException() : this("Alumno Repetido.")
         {
 
         }
 
+        /// <summary>
+        /// Inicializa llamando a la base con un mensaje personalizado.
+        /// </summary>
+        /// <param name="message"></param>
         public AlumnoRepetidoException(string message) :base(message)
         {
 
