@@ -50,13 +50,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClasesInstanciables\ClasesInstanciables.csproj">
-      <Project>{74b189af-a87b-46e4-9148-f1189458b78e}</Project>
-      <Name>ClasesInstanciables</Name>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{98c3e52f-578c-4de6-ac82-3310b6d570c3}</Project>
+      <Name>Archivos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades\ClasesAbstractas.csproj">
-      <Project>{3dd429a3-135f-4471-981c-53f2571d4fc4}</Project>
-      <Name>ClasesAbstractas</Name>
+    <ProjectReference Include="..\ClasesInstanciables\Entidades.csproj">
+      <Project>{74b189af-a87b-46e4-9148-f1189458b78e}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetodExtension\MetodExtension.csproj">
+      <Project>{4ade3d36-81d8-4216-abc9-aa45e224239c}</Project>
+      <Name>MetodExtension</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

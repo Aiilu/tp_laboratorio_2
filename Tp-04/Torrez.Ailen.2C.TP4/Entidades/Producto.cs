@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ClasesAbstractas
 {
+    [XmlInclude(typeof(Juegos))]
+
     public abstract class Producto
     {
         public enum VarProductos { Libros, Juegos }
@@ -49,14 +52,6 @@ namespace ClasesAbstractas
             }
         }
 
-        public virtual string MostrarDatos()
-        {
-            StringBuilder datos = new StringBuilder();
-
-            datos.AppendLine($"Tipo de Producto: {this.Productos}");
-            datos.AppendLine($"Precio: {this.Precio}");
-
-            return datos.ToString();
-        }
+        public abstract override string ToString();
     }
 }

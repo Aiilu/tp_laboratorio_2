@@ -9,3 +9,14 @@ C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\
 C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
 C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
 C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Entidades.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Interfaz.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Entidades.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Interfaz.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojAssemblyReference.cache
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb

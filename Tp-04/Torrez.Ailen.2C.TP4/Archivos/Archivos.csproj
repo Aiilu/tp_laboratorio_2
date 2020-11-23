@@ -45,13 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClasesInstanciables\ClasesInstanciables.csproj">
+    <ProjectReference Include="..\ClasesInstanciables\Entidades.csproj">
       <Project>{74b189af-a87b-46e4-9148-f1189458b78e}</Project>
-      <Name>ClasesInstanciables</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entidades\ClasesAbstractas.csproj">
-      <Project>{3dd429a3-135f-4471-981c-53f2571d4fc4}</Project>
-      <Name>ClasesAbstractas</Name>
+      <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

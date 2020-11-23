@@ -8,27 +8,55 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesAbstractas;
-using ClasesInstanciables;
+using Entidades;
+using Excepciones;
 
 namespace FormYenny
 {
     public partial class FormCarrito : Form
     {
+        private List<Producto> lis;
+        private List<Producto> stock;
+
+        public List<Producto> Lis
+        {
+            get
+            {
+                return this.lis;
+            }
+            set
+            {
+                this.lis = value;
+            }
+        }
+        public List<Producto> Stock
+        {
+            get
+            {
+                return this.stock;
+            }
+            set
+            {
+                this.stock = value;
+            }
+        }
         public FormCarrito()
         {
             InitializeComponent();
+            this.Lis = new List<Producto>();
+            this.Stock = new List<Producto>();
         }
 
         private void btnAceptarCarrito_OnClick(object sender, EventArgs e)
         {
-            FormPrincipal menu = new FormPrincipal();
+            foreach (Producto p in this.clbCarrito.CheckedItems)
+            {
+                this.Lis.Add(p);
+                this.Stock.Remove(p);
+            }
 
-            menu.Carrito.Items.Add(this.clbCarrito.CheckedItems.ToString());
-
-            menu.ShowDialog(); //No puedo usar el Show porque no se guardan las cosas en el menu
-
-            //this.Close();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void FormCarrito_Load(object sender, EventArgs e)
@@ -38,34 +66,45 @@ namespace FormYenny
 
         private void AgregarTipoProd_OnSelectValueChanged(object sender, EventArgs e)
         {
-            if (this.cmbCarrito.Text == "Libros")
+            try
             {
                 this.clbCarrito.Items.Clear();
+                if (this.cmbCarrito.Text == "Libros")
+                {
+                    foreach (Producto p in this.Stock)
+                    {
+                        if (p.Productos == Producto.VarProductos.Libros)
+                        {
+                            this.clbCarrito.Items.Add(p);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Producto p in this.Stock)
+                    {
+                        if (p.Productos == Producto.VarProductos.Juegos)
+                        {
+                            this.clbCarrito.Items.Add(p);
+                        }
+                    }
+                }
 
-                /*int[] array;
-
-                array = (int[])Enum.GetValues(typeof(Libros.LibTerror));
-
-                this.clbCarrito.Items.Add(array);*/
-
-                this.clbCarrito.Items.Add("Anochecer");
-                this.clbCarrito.Items.Add("IT");
-
+                if (this.clbCarrito.Items.Count == 0)
+                {
+                    throw new FaltaStockException($"No hay stock de {this.cmbCarrito.Text}, vuelva a iniciar el formulario.");
+                }
             }
-            else
+            catch (FaltaStockException ex)
             {
-                this.clbCarrito.Items.Clear();
-                this.clbCarrito.Items.Add("Horizon");
-                this.clbCarrito.Items.Add("Ghost");
+                this.Close();
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnCancelar_OnClick(object sender, EventArgs e)
         {
-            FormPrincipal menu = new FormPrincipal();
-
-            menu.Show();
-
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }

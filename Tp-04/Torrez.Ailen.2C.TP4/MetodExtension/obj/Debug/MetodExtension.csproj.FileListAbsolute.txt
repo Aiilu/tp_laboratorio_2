@@ -1,0 +1,11 @@
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\MetodExtension.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\MetodExtension.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\ClasesInstanciables.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\Interfaz.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\ClasesInstanciables.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\bin\Debug\Interfaz.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\obj\Debug\MetodExtension.csprojAssemblyReference.cache
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\obj\Debug\MetodExtension.csproj.CoreCompileInputs.cache
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\obj\Debug\MetodExtension.csproj.CopyComplete
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\obj\Debug\MetodExtension.dll
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\MetodExtension\obj\Debug\MetodExtension.pdb

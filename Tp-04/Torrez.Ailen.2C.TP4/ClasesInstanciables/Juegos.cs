@@ -3,27 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClasesAbstractas;
 
-namespace ClasesInstanciables
+namespace Entidades
 {
-    public class Juegos : Producto
+
+    public  class Juegos : Producto
     {
-        //public enum JuegosPS4 { Ghost, Horizon }
+        public enum JuegosPS4 { Ghost, Horizon }
 
-        //private JuegosPS4 juegosPS4;
+        private JuegosPS4 juegosPS4;
 
-        /*public Juegos(float precio, JuegosPS4 juego) :base(precio, Producto.VarProductos.Juegos)
+        public Juegos() :base()
+        {
+        }
+
+        public Juegos(float precio, JuegosPS4 juego) :base(precio, Producto.VarProductos.Juegos)
         {
             this.JuegosDePS4 = juego;
-        }*/
+        }
 
         public Juegos(float precio) : base(precio, Producto.VarProductos.Juegos)
         {
             
         }
 
-        /*public JuegosPS4 JuegosDePS4
+        public JuegosPS4 JuegosDePS4
         {
             get
             {
@@ -33,17 +37,11 @@ namespace ClasesInstanciables
             {
                 this.juegosPS4 = value;
             }
-        }*/
+        }
 
-        public override string MostrarDatos()
+        public override string ToString()
         {
-            StringBuilder datos = new StringBuilder();
-
-            datos.AppendLine(base.MostrarDatos());
-
-            //datos.AppendLine($"Juego: {this.JuegosDePS4}");
-
-            return datos.ToString();
+            return $"{this.JuegosDePS4} ${this.Precio}";
         }
     }
 }
