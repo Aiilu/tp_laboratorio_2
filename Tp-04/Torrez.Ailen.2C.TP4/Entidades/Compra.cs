@@ -9,6 +9,9 @@ using Interfaz;
 
 namespace Entidades
 {
+    /// <summary>
+    /// ACA SE IMPLEMENTA EL TEMA INTERFACES.
+    /// </summary>
     public class Compra : IDAO
     {
         private List<Producto> listaProductos;
@@ -16,16 +19,20 @@ namespace Entidades
         private SqlConnection sqlConnection;
         private string connectionString;
 
-
+        /// <summary>
+        /// Instancia la lista de Productos y se encarga de realizar la conexion a la base de datos
+        /// </summary>
         public Compra()
         {
             this.listaProductos = new List<Producto>();
 
-            //Serie de datos para conectarse a la base de datos
             this.connectionString = "Server=.;Database=Compras;Trusted_Connection=True";
-            this.sqlConnection = new SqlConnection(connectionString); //Se encarga de realizar la conexion.
+            this.sqlConnection = new SqlConnection(connectionString);
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la lista de Productos.
+        /// </summary>
         public List<Producto> ListaProductos
         {
             get
@@ -38,27 +45,27 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Metodo de la interfaz IDAO, EL CUAL IMPLEMENTA EL TEMA BASE DE DATOS. Se encarga de insertar un registro en la tabla.
+        /// </summary>
+        /// <param name="nombre">Nombre a insertar</param>
+        /// <param name="dni">DNI a insertar</param>
+        /// <param name="datos">Datos a insertar</param>
         public void InsertarEnTabla(string nombre, int dni, string datos)
         {
             try
             {
                 string command = "INSERT INTO TablaCompras (Nombre, DNI, Datos) VALUES (@NombreIdent, @DNIIdent, @DatosIdent)";
-                //sqlCommand.CommandText
 
-                //Para insertar secuencias INSERT en base de datos.
-                //Ejecuta comandos en la base de datos.
                 SqlCommand sqlCommand = new SqlCommand(command, this.sqlConnection);
-                //Lo que esta aca lo va a interpretar como un valor si o si, y no como una secuencia SQL.
-                //Lo que pasaria si pusieramos directamente la propiedad.
-                sqlCommand.Parameters.AddWithValue("NombreIdent", nombre); //Como voy a identificar a este parametro.
+
+                sqlCommand.Parameters.AddWithValue("NombreIdent", nombre); 
                 sqlCommand.Parameters.AddWithValue("DNIIdent", dni);
                 sqlCommand.Parameters.AddWithValue("DatosIdent", datos);
 
-                //Abrimos la conexion
                 this.sqlConnection.Open();
 
-                //Ejecutar sentencias que no son Querys, osea, no consultas, no select. Para insert, update y delete.
-                sqlCommand.ExecuteNonQuery(); //Asi devuelve la cantidad de filas afectadas.
+                sqlCommand.ExecuteNonQuery(); 
             }
             finally
             {
@@ -69,6 +76,12 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Metodo de la interfaz IDAO, EL CUAL IMPLEMENTA EL TEMA BASE DE DATOS. Se encarga de leer un registro de la tabla.
+        /// </summary>
+        /// <param name="nombre">Nombre por el cual filtra en la base</param>
+        /// <param name="dni">DNI por el cual filtra en la base</param>
+        /// <returns></returns>
         public string LeerTabla(string nombre, int dni)
         {
             try
@@ -99,6 +112,10 @@ namespace Entidades
             return null;
         }
 
+        /// <summary>
+        /// Sobrescritura del metodo virtual ToString.
+        /// </summary>
+        /// <returns>Retorna un string con los datos contenidos en la lista de Productos</returns>
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();

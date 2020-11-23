@@ -8,26 +8,36 @@ namespace PruebasUnitarias
     [TestClass]
     public class TestUnit
     {
+        /// <summary>
+        /// Test que verifica que la tabla inserte y lea correctamente. ACA SE IMPLEMENTA TEST UNITARIOS.
+        /// </summary>
         [TestMethod]
         public void PruebaInsert()
         {
             //Arrange
             Compra compra = new Compra();
+
             //Act
             compra.InsertarEnTabla("Ailen", 42661178, "Anochecer $1000");
+
             //Assert
             Assert.AreEqual("Anochecer $1000", compra.LeerTabla("Ailen", 42661178));
         }
 
+        /// <summary>
+        /// Test que verifica que un archivo se serialize y deserialize correctamente. ACA SE IMPLEMENTA TEST UNITARIOS.
+        /// </summary>
         [TestMethod]
         public void PruebaSerializacion()
         {
             //Arrange
             Juegos juego = new Juegos(1000f,Juegos.JuegosPS4.Ghost);
             Juegos juego2 = null;
+
             //Act
             Archivos<Juegos>.GuardarArchivo(juego);
             juego2 = Archivos<Juegos>.LeerArchivo();
+
             //Assert
             Assert.AreEqual(juego.Precio, juego2.Precio);
             Assert.AreEqual(juego.Productos, juego2.Productos);

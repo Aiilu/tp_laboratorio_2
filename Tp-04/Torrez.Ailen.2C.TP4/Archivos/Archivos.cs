@@ -13,7 +13,10 @@ namespace Archivos
     public static class Archivos<T>
         where T : new ()
     {
-
+        /// <summary>
+        /// Metodo estatico de tipo generico que serializa el objeto pasado por parametro.
+        /// </summary>
+        /// <param name="tipoQueGuardar">Objeto a serializar</param>
        public static void GuardarArchivo(Object tipoQueGuardar)
         {
             XmlTextWriter writer = null;
@@ -35,6 +38,10 @@ namespace Archivos
             }
         }
 
+        /// <summary>
+        /// Metodo estatico de tipo generico que deserializa un objeto.
+        /// </summary>
+        /// <returns>Retorna el objeto deserializado</returns>
         public static T LeerArchivo()
         {
             XmlTextReader read = null;

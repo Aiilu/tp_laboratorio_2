@@ -22,13 +22,19 @@ namespace FormYenny
 
         public event CompraRealizada EventCompra;
 
+        /// <summary>
+        /// Constructor Principal. Intancia una compra y se le suscribe un metodo al evento. ACA SE IMPLEMENTA EVENTOS.
+        /// </summary>
         public FormCompra()
         {
             InitializeComponent();
             this.Compra = new Compra();
             this.EventCompra += this.Compra.InsertarEnTabla;
-    }
+        }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo compra.
+        /// </summary>
         public Compra Compra
         {
             get
@@ -41,6 +47,11 @@ namespace FormYenny
             }
         }
 
+        /// <summary>
+        /// Load del formulario. Muestra la lista de los productos a comprar junto con su precio uniatario y uno general. ACA SE IMPLEMENTA EL METODO DE EXTENSION .MOSTRAR();
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCompra_Load(object sender, EventArgs e)
         {
             float precio = 0;
@@ -54,6 +65,12 @@ namespace FormYenny
             this.lblPrecioTotal.Text = precio.Mostrar();
         }
 
+        /// <summary>
+        /// Se encarga de instanciar un hilo secundario que permita guardar un archivo xml. Tambien se invoca al evento que previamente fue suscripto por un metodo el cual se va a encargar de insertar en la tabla.
+        /// ACA SE IMPLEMENTA TANTO COMO ARCHIVOS GENERICOS, COMO EVENTOS E HILOS.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmar_OnClick(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(this.txtNombre.Text) && !string.IsNullOrWhiteSpace(this.txtDNI.Text))
@@ -70,6 +87,11 @@ namespace FormYenny
             }
         }
 
+        /// <summary>
+        /// El control permanece en ese TextBox hasta que sea un valor valido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtDni_OnLeave(object sender, EventArgs e)
         {
             int num;

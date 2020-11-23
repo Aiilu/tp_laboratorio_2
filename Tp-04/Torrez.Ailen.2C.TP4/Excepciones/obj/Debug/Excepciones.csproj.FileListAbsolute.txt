@@ -3,3 +3,4 @@ C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\Excepciones\bi
 C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
 C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\Excepciones\obj\Debug\Excepciones.dll
 C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\Excepciones\obj\Debug\Excepciones.pdb
+C:\Users\lgm14\Desktop\tp_laboratorio_2\Tp-04\Torrez.Ailen.2C.TP4\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
