@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClasesInstanciables\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{74b189af-a87b-46e4-9148-f1189458b78e}</Project>
       <Name>Entidades</Name>
     </ProjectReference>

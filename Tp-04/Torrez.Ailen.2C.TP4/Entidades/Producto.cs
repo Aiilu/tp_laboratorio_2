@@ -5,17 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace ClasesAbstractas
+namespace Entidades
 {
-    [XmlInclude(typeof(Juegos))]
-
+    [XmlInclude(typeof(Libros)), XmlInclude(typeof(Juegos))]
     public abstract class Producto
     {
         public enum VarProductos { Libros, Juegos }
 
         private float precio;
         private VarProductos productos;
-        
+
         public Producto()
         {
 

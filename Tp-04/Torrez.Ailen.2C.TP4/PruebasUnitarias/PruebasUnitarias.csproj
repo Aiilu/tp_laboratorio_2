@@ -60,7 +60,7 @@
       <Project>{98c3e52f-578c-4de6-ac82-3310b6d570c3}</Project>
       <Name>Archivos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClasesInstanciables\Entidades.csproj">
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{74b189af-a87b-46e4-9148-f1189458b78e}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
