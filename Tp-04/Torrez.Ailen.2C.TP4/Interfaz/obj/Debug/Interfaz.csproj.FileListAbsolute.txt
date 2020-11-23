@@ -1,0 +1,9 @@
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\bin\Debug\Interfaz.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\bin\Debug\Interfaz.pdb
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\bin\Debug\Entidades.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\bin\Debug\Entidades.pdb
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\obj\Debug\Interfaz.csprojAssemblyReference.cache
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\obj\Debug\Interfaz.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\Interfaz\obj\Debug\Interfaz.pdb

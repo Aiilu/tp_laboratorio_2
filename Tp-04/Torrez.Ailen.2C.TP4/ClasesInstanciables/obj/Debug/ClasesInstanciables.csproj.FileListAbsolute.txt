@@ -1,0 +1,11 @@
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Entidades.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Interfaz.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Entidades.pdb
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\bin\Debug\Interfaz.pdb
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojAssemblyReference.cache
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\Morsita\source\repos\Torrez.Ailen.2C.TP4\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
