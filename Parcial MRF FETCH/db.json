@@ -1,0 +1,37 @@
+{
+  "anuncios": [
+    {
+      "id": 3,
+      "titulo": "Leonardo",
+      "transaccion": "Venta",
+      "descripcion": "aaa ",
+      "precio": "5400",
+      "tipo": "Perro",
+      "raza": "Pitbull Aleman",
+      "fecha": "2021-06-20",
+      "vacuna": "No"
+    },
+    {
+      "id": 6,
+      "titulo": "Funciona",
+      "transaccion": "Venta",
+      "descripcion": "y funcione",
+      "precio": "1",
+      "tipo": "Gato",
+      "raza": "Hola",
+      "fecha": "2021-06-25",
+      "vacuna": "Si"
+    },
+    {
+      "id": 7,
+      "titulo": "funciona",
+      "transaccion": "Venta",
+      "descripcion": "y funcione",
+      "precio": "2",
+      "tipo": "Perro",
+      "raza": "Pitbull",
+      "fecha": "0001-01-01",
+      "vacuna": "Si"
+    }
+  ]
+}
